@@ -35,13 +35,13 @@ resource "aws_security_group" "bia_dev" {
 
 resource "aws_instance" "bia-dev" {
   ami           = "ami-02f3f602d23f1659d"
-  instance_type = "t2+.micro"
+  instance_type = "t3.micro"
   tags = {
     Name        = var.instance_name
     Environment = "development"
   }
   root_block_device {
-    volume_size = 10
+    volume_size = 12
   }
   vpc_security_group_ids = [aws_security_group.bia_dev.id]
 }
