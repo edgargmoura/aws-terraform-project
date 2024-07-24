@@ -35,7 +35,7 @@ resource "aws_security_group" "bia_dev" {
 
 resource "aws_instance" "bia-dev" {
   ami           = "ami-02f3f602d23f1659d"
-  instance_type = "t3.micro"
+  instance_type = "t2+.micro"
   tags = {
     Name        = var.instance_name
     Environment = "development"
