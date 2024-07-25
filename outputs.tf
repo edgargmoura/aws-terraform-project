@@ -30,3 +30,8 @@ output "aws_security_group_name" {
   description = "security group name"
   value       = aws_security_group.bia_dev.name
 }
+
+output "aws_iam_role_name" {
+  description = "IAM role name"
+  value       = aws_iam_role.role_acesso_ssm.id
+}
