@@ -15,13 +15,13 @@ output "aws_instance_type" {
 }
 
 output "aws_instance_public_ip" {
-    description = "Instance public IP address"
-    value = aws_instance.bia-dev.public_ip
+  description = "Instance public IP address"
+  value       = aws_instance.bia-dev.public_ip
 }
 
 output "aws_instance_private_ip" {
-    description = "Private IP address"
-    value = aws_instance.bia-dev.private_ip
+  description = "Private IP address"
+  value       = aws_instance.bia-dev.private_ip
 }
 
 #Security Groups Outputs
@@ -34,4 +34,14 @@ output "aws_security_group_name" {
 output "aws_iam_role_name" {
   description = "IAM role name"
   value       = aws_iam_role.role_acesso_ssm.id
+}
+
+output "aws_db_instance_name" {
+  description = "DB Instance name"
+  value       = aws_db_instance.bia_db.id
+}
+
+output "rds_endpoint" {
+  description = "DB Instance Endpoint"
+  value       = aws_db_instance.bia_db.endpoint
 }
