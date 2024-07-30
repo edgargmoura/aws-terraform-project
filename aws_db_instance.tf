@@ -16,7 +16,7 @@ resource "aws_db_instance" "bia_db" {
   custom_iam_instance_profile           = null
   customer_owned_ip_enabled             = false
   db_name                               = null
-  db_subnet_group_name                  = "default-vpc-027b833a447bad254"
+  db_subnet_group_name                  = "default-vpc-0ee5da681b9d88b31"
   delete_automated_backups              = true
   deletion_protection                   = false
   domain                                = null

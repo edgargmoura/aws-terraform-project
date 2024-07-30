@@ -11,5 +11,5 @@ terraform {
 # Configure the AWS Provider
 provider "aws" {
   region  = "us-east-1"
-  profile = "bia-tf"
+  profile = "tf-bia-lab"
 }

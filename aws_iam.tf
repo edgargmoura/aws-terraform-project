@@ -6,7 +6,7 @@ resource "aws_iam_instance_profile" "role_acesso_ssm" {
   name        = "role-acesso-ssm"
   name_prefix = null
   path        = "/"
-  role        = "role-acesso-ssm"
+  role        = aws_iam_role.role_acesso_ssm.name
   tags        = {}
   tags_all    = {}
 }
@@ -25,7 +25,7 @@ resource "aws_iam_role" "role_acesso_ssm" {
   })
   description           = null
   force_detach_policies = false
-  managed_policy_arns   = ["arn:aws:iam::870567088900:policy/policy-get-secret-rds-bia", "arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier", "arn:aws:iam::aws:policy/AdministratorAccess-AWSElasticBeanstalk", "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess", "arn:aws:iam::aws:policy/AmazonECS_FullAccess", "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore", "arn:aws:iam::aws:policy/SecretsManagerReadWrite", "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role"]
+  managed_policy_arns   = ["arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier", "arn:aws:iam::aws:policy/AdministratorAccess-AWSElasticBeanstalk", "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess", "arn:aws:iam::aws:policy/AmazonECS_FullAccess", "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore", "arn:aws:iam::aws:policy/SecretsManagerReadWrite", "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role"]
   max_session_duration  = 3600
   name                  = "role-acesso-ssm"
   name_prefix           = null
