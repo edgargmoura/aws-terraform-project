@@ -75,7 +75,7 @@ resource "aws_security_group" "bia_db" {
     ipv6_cidr_blocks = []
     prefix_list_ids  = []
     protocol         = "tcp"
-    security_groups  = [aws_security_group.bia-ec2.id, aws_security_group.bia_web]
+    security_groups  = [aws_security_group.bia-ec2.id, aws_security_group.bia_web.id]
     self             = false
     to_port          = 5432
   }]
