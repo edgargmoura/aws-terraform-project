@@ -16,7 +16,6 @@ resource "aws_db_instance" "bia_db" {
   custom_iam_instance_profile           = null
   customer_owned_ip_enabled             = false
   db_name                               = null
-  db_subnet_group_name                  = "default-vpc-0ee5da681b9d88b31"
   delete_automated_backups              = true
   deletion_protection                   = false
   domain                                = null
@@ -30,10 +29,9 @@ resource "aws_db_instance" "bia_db" {
   identifier_prefix                     = null
   instance_class                        = "db.t3.micro"
   iops                                  = 0
-  kms_key_id                            = "arn:aws:kms:us-east-1:870567088900:key/09603277-355b-4bd6-956d-9196f9db1015"
   license_model                         = "postgresql-license"
   maintenance_window                    = "sat:06:38-sat:07:08"
-  manage_master_user_password           = null
+  manage_master_user_password           = true
   master_user_secret_kms_key_id         = null
   max_allocated_storage                 = 0
   monitoring_interval                   = 0
